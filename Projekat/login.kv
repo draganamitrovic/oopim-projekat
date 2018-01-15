@@ -1,0 +1,35 @@
+#: import main login
+#: import ListAdapter kivy.adapters.listadašter.ListAdapter
+#: import ListItemButton kivy.uix.listView.ListItemButton
+
+Login:
+
+<Login>:
+    orientation: "vertical"
+    username_text_input: username_login
+    password_text_input: password_login
+    padding: 10
+    spacing: 10
+
+    BoxLayout:
+        size_hint_y: None
+        height: "40dp"
+
+        Label:
+            text: "Username"
+        TextInput: 
+            id: username_login
+        Label:
+            text: "Password"
+        TextInput: 
+            id: password_login
+    
+    BoxLayout:
+        size_hint_y: None
+        height: "40dp"
+        Button:
+            text: "Login"
+            size_hint_x: 15
+            on_press: root.login_student()
+
+         
